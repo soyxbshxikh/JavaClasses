@@ -48,7 +48,7 @@ class Rectangle implements Shape {
     }
 }
 
-public class MultipleInheritance {
+public class AssignMultipleInheritance {
 
     public static void main(String[] args) {
         Shape square = new Square(10);
