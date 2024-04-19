@@ -20,7 +20,7 @@ public class Assignment5 {
             n++;
         }
         for (int i = 0; i < 5; i++) {
-        System.out.println(PrimeNumbers[i]);
+            System.out.println(PrimeNumbers[i]);
         }
     }
 }

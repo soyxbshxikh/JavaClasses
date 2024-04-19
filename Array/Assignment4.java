@@ -8,9 +8,9 @@ public class Assignment4 {
         System.out.println("Enter 5 numbers:");
         for (int i = 0; i < 5; i++) {
             numbers[i] = scanner.nextInt();
-        }   
+        }
         scanner.close();
-        
+
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 4 - i; j++) {
                 if (numbers[j] > numbers[j + 1]) {

@@ -16,5 +16,5 @@ public class Assignment1 {
         sc.close();
         System.out.println(sum);
     }
-    
+
 }
