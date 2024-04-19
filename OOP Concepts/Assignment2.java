@@ -2,33 +2,34 @@ import java.util.Scanner;
 
 class AA {
   public int a, b;
- public char operater;
+  public char operater;
 
   public void getdata(int x, int y, char z) {
     a = x;
     b = y;
     operater = z;
   }
-  
-public int result = 0;
-public void checkOperator(char operator, int x, int y){
- switch (operator) {
-            case '+':
-                result = x + y;
-                break;
-            case '-':
-                result = x - y;
-                break;
-            case '*':
-                result = x * y;
-                break;
-            case '/':
-                result = x / y;
-                break;
-            default:
-                System.out.println("Invalid Operator!");
-        }
-}
+
+  public int result = 0;
+
+  public void checkOperator(char operator, int x, int y) {
+    switch (operator) {
+      case '+':
+        result = x + y;
+        break;
+      case '-':
+        result = x - y;
+        break;
+      case '*':
+        result = x * y;
+        break;
+      case '/':
+        result = x / y;
+        break;
+      default:
+        System.out.println("Invalid Operator!");
+    }
+  }
 
 }
 
@@ -40,7 +41,7 @@ class BB extends AA {
   }
 }
 
-public class Assignment2{
+public class Assignment2 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -51,9 +52,8 @@ public class Assignment2{
     System.out.println("Enter operater No:(+,-,*,/) ");
     char z = sc.next().charAt(0);
 
-
     BB b = new BB();
-    b.checkOperator(z,x,y);
+    b.checkOperator(z, x, y);
     b.getdata(x, y, z);
     b.show();
     sc.close();
