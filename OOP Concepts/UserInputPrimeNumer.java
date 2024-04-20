@@ -21,7 +21,7 @@ public class UserInputPrimeNumer {
 
         System.out.println("Enter Five Numbers:");
         for (int i = 0; i < 5; i++) {
-            numbers[i] = scanner.nextInt();
+            numbers[i] = sc.nextInt();
         }
 
         System.out.println("Prime Numbers Are:");
