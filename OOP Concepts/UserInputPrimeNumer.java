@@ -16,7 +16,7 @@ class PrimeChecker {
 
 public class UserInputPrimeNumer {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int[] numbers = new int[5];
 
         System.out.println("Enter Five Numbers:");
@@ -30,5 +30,6 @@ public class UserInputPrimeNumer {
                 System.out.println(numbers[i]);
             }
         }
+        sc.close();
     }
 }
