@@ -1,4 +1,3 @@
-
 // 3 Out Of 1 or 2 Greater Number or all are Equal Numbers
 import java.util.Scanner;
 

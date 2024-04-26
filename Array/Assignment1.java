@@ -1,3 +1,4 @@
+// Add a Five Numbers
 import java.util.Scanner;
 
 public class Assignment1 {
@@ -14,7 +15,7 @@ public class Assignment1 {
             sum = sum + a[i];
         }
         sc.close();
-        System.out.println(sum);
+        System.out.println("Sum :"+sum);
     }
 
 }

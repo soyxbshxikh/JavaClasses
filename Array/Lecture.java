@@ -1,4 +1,3 @@
-
 // Number of Length
 import java.util.Scanner;
 

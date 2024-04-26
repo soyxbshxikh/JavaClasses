@@ -1,3 +1,5 @@
+// Enter 5 Number and Check Prime Number 
+package Assignment;
 import java.util.Scanner;
 
 class PrimeChecker {

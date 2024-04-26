@@ -1,4 +1,3 @@
-
 // 3 Out Of 1 Greater Number
 import java.util.Scanner;
 

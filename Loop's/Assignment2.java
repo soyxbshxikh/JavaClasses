@@ -1,4 +1,3 @@
-
 // Sum of Digits
 import java.util.Scanner;
 

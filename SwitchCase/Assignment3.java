@@ -1,5 +1,4 @@
 // Enter Two Number and Choose Operator (+,-,*,/) 
-
 import java.util.Scanner;
 
 public class Assignment3 {

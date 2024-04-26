@@ -1,3 +1,5 @@
+// 2 No Calculator
+package Assignment;
 import java.util.Scanner;
 
 class AA {
@@ -41,7 +43,7 @@ class BB extends AA {
   }
 }
 
-public class Assignment2 {
+public class UserInputCalculator {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 

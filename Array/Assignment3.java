@@ -1,5 +1,5 @@
 // 5 Prime Numbers in array
-public class Assignment5 {
+public class Assignment3 {
     public static void main(String[] args) {
         int[] PrimeNumbers = new int[5];
         int c = 0;

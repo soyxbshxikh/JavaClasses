@@ -1,4 +1,3 @@
-
 // Number of Table
 import java.util.Scanner;
 

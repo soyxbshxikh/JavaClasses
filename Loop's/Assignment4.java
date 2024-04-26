@@ -1,4 +1,3 @@
-
 // Addition of Odd Number and Even Number
 import java.util.Scanner;
 

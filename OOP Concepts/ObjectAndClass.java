@@ -1,3 +1,4 @@
+// Object And Class Lecture
 class data {
     private int a, b;
 

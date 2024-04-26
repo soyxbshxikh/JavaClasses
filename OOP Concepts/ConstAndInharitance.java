@@ -1,3 +1,4 @@
+// ConstAndInharitance Lecture
 class empdata {
       public int empno;
       public String name;
@@ -35,7 +36,7 @@ class showEmp extends empdetails {
       }
 }
 
-public class ConstInharitance {
+public class ConstAndInharitance {
 
       public static void main(String[] args) {
             showEmp s = new showEmp(39, "Soyab", 20, 20000, 8830422747L);

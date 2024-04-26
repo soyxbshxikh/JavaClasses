@@ -1,4 +1,3 @@
-
 // Food Billing
 import java.util.Scanner;
 

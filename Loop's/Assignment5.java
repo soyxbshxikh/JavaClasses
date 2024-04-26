@@ -1,4 +1,3 @@
-
 // Palindrome and Not Palindrome Number
 import java.util.Scanner;
 

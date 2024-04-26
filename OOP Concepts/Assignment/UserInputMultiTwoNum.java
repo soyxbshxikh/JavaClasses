@@ -1,3 +1,5 @@
+// Multi of 2 numbers
+package Assignment;
 import java.util.Scanner;
 
 class AA {
@@ -15,7 +17,7 @@ class BB extends AA {
     }
 }
 
-public class Assignment1 {
+public class UserInputMultiTwoNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

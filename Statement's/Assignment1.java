@@ -1,4 +1,3 @@
-
 // Enter a Marks and Find Division / Fail
 import java.util.Scanner;
 

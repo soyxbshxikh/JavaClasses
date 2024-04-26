@@ -1,4 +1,3 @@
-
 // Number of Day
 import java.util.Scanner;
 

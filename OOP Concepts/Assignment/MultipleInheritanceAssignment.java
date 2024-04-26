@@ -1,3 +1,5 @@
+// MultipleInheritance Assignment
+package Assignment;
 //  Shape interface
 interface Shape {
     void calculateArea();
@@ -48,7 +50,7 @@ class Rectangle implements Shape {
     }
 }
 
-public class AssignMultipleInheritance {
+public class MultipleInheritanceAssignment {
 
     public static void main(String[] args) {
         Shape square = new Square(10);

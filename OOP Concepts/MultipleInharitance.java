@@ -1,6 +1,4 @@
-/**
- * MultipleInharitance
- */
+// MultipleInharitance Lecture
 interface square {
     public void soyab(int a);
 }

@@ -1,4 +1,3 @@
-
 // Number of Month
 import java.util.Scanner;
 

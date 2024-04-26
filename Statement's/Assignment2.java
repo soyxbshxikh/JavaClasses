@@ -1,4 +1,3 @@
-
 // Positive Even Number and Negative Odd Number 
 import java.util.Scanner;
 

@@ -1,4 +1,3 @@
-
 // Number Of Factorial
 import java.util.Scanner;
 

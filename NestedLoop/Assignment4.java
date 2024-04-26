@@ -1,8 +1,7 @@
-
 // Enter Any Two Number of Table[5,10] and Print Common Number of Both the Tables
 import java.util.Scanner;
 
-public class Assignment9 {
+public class Assignment4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Any Value: ");
