@@ -1,3 +1,4 @@
+// Super keyword is used to invoke parent class constructor
 class Main
 {
     Main() 

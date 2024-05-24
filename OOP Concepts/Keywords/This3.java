@@ -17,5 +17,4 @@ public class This3 {
     {
         Main t=new Main(10);
     }
-    
 }
