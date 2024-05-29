@@ -1,401 +1,193 @@
-# What is Java ?
+<h1 align="center"> JAVA Notes </h1>
 
-- Java is a popular programming language, created in 1995.
+### 1. What is Java ?
+
+- Java is a popular programming language.
+- Java file name always save **. Java** extension.
+- Java file name & class name are always same.
+- Java is an object-oriented programming language.
 - It is owned by Oracle, and more than 3 billion devices run Java.
----
-# Why Use Of Java ?
-
-- Java works on different platforms Like (Windows, Mac, Linux, Raspberry Pi, etc.)
-- It is one of the most popular programming language in the world.
-- It has a large demand in the current job market.
-- It is easy to learn and simple to use.
-- It is open-source and free.
-- It is secure, fast and powerful.
-- It has a huge community support (tens of millions of developers).
-- Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa.
----
-
-
-
-
-
-
-# Multithreading
-
-# Multitasking : Performing multiple task at a single time
-
-#### Use : It increases the performance of CPU
+- Java is developed by James Gosling and his team Sun Microsystem ( in 1995 ).
+- Java is a platform independent language ( Windows, Mac, Linux, Raspberry Pi, etc ).
 
 ---
 
-#### Types :
+### 2. Which software is used for JAVA ?
 
-1 . Process based Multitasking { Multiprocessing }
-
-2 . Thread based Mutitasking { Multithreading }
-
-## Multiprocessing
-
-- Multiprocessing : When one system is connected to multiple processor in order to complete the task
-
-## Multithreading
-
-- Multithreading : Excecuting multiple threads at single time
-
-- Threads : in one process there is more than one small task are running is called as Threads
+- Eclipse.
+- NetBeans.
+- Visual Studio Code.
 
 ---
 
-## Without Thread Example :
+### 3. How to see output in JAVA ?
 
-```java
-class Mxplayer
-{
-    public static void main()
-    {
-        playvideo();
-        playmusic();
+- Right-Click on Your JAVA file, and click **RUN**.
+
+---
+
+### 4. Basic structure of JAVA
+
+```JAVA
+public class MyClass {
+    public static void main(String[] args) {
+        // Code write here....
     }
-};
-class Video
-{
-   void playvideo()
-   {
-       //code
-   }
-};
-class Music
-{
-   void playmusic()
-   {
-        //code
-   }
 }
 ```
 
-> # We can create threads with two types
+- **public** :- The code is accessible for all classes.
+- **class** :- The class is collection of objects.
+- **MyClass** :- is a class name.
+- **static** :-  Method belongs to the Main class.
+- **void** :- Method does not have a return value.
+- **main(String[] args)** :- Any code inside the main method will be executed.
 
-### 1. Thread Class
+---
 
-    1. In this method we have to extend the Thread class and override the run() method.
-    2. In Thread Class there are many methods
+### 5. Print output in JAVA
 
-```java
-class MyThread extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread Start");
-    }
-    public static void main(String args[])
-    {
-        MyThread t = new MyThread();
-        t.start();
-    }
+```JAVA
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World"); //Text
+    System.out.println(500 + 500); //Numbers
+  }
 }
+```
+
+Output :-
+---
+ <dl>
+  <dd> 
+    Hello World <br>
+    1000
+  </dd>
+</dl>
+
+---
+
+### 6. Variables Declaration
+
+---
+
+> In Java, there are different types of data types. <br>
+ for example:-
+
+- **String** - Stores text "Hello" ( in double quotes ).
+- **int** - Stores integers numbers ( 123 or -123 ).
+- **float** - Stores floating point numbers ( 19.99 or -19.99 ).
+- **char** - Stores single characters 'a' or 'B' ( in single quotes ).
+- **boolean** - stores values with two states: ( true or false )
+
+---
+
+#### Syntax :-
+
+```JAVA
+data_type variableName = value;
 ```
 
 ---
 
-### Output : Thread Start
+#### Type 1 :-
 
----
-
-### 2. Runnable Interface
-
-    1. In this method we have to implement the Runnable interface and override the run() method.
-    2. In Runnable Interface here is only one method run();
-
-```java
-class MyThread implements Runnable
-{
-    public void run()
-    {
-       System.out.println("Thread Start");
-    }
-    public static void main(String args[])
-    {
-        MyThread t = new MyThread();
-        Thread t1 = new Thread(t);
-        t1.start();
-    }
-}
+```JAVA
+int myNum = 15;
+System.out.println(myNum);
 ```
 
 ---
 
-### Output : Thread Start
+#### Type 2 :-
 
----
-
-## 1. Performing single task from single thread
-
-```java
-class MyThread extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread Start");
-    }
-}
-class Main
-{
-    public static void main(String args[])
-    {
-        MyThread t = new MyThread();
-        t.start();
-    }
-}
+```JAVA
+int myNum;
+myNum = 15;
+System.out.println(myNum);
 ```
 
 ---
 
-## 2. Performing multiple task from single thread
+#### Type 3 :-
 
-```java
-class MyThread extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread Start");
-    }
-    public void run(int x)
-    {
-        System.out.println(x);
-    }
-}
-class Main
-{
-    public static void main(String args[])
-    {
-        MyThread t = new MyThread();
-        t.start();
-    }
-}
+```JAVA
+int myNum = 15;
+myNum = 20;
+System.out.println(myNum);
 ```
 
 ---
 
-## 3. Performing multiple task from multiple thread
+#### Type 4 :-
 
-```java
-class MyThread1 extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread Start1");
-    }
-}
-class MyThread2 extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread Start2");
-    }
-}
-class Main
-{
-    public static void main()
-    {
-        MyThread1 t1 = new MyThread1();
-        MyThread2 t2 = new MyThread2();
-        t1.start();
-        t2.start();
-    }
-}
+```JAVA
+int x = 5;
+int y = 6;
+System.out.println("Output is :- " + (x + y));
 ```
 
-<br><br>
+---
 
-> # Thread class Methods and Constructor
+#### Type 5 :-
 
-### Consturctor
-
-- Thread()
-- Thread(String name)
-- Thread(Runnable r)
-- Thread(Runnable r, String name)
-- Thread(ThreadGroup tg,Runnable r)
-- Thread(ThreadGroup tg,String name)
-- Thread(ThreadGroup tg,Runnable r,String name)
-- Thread(ThreadGroup tg,Runnable r,String name,Long Stacksize)
-
-### Methods
-
-- Basic Methods
-  - void start()
-  - void run()
-  - isAlive()
-  - currentThread()
-- Naming Methods
-  - getName()
-  - setName()
-- Daemon Threads methods
-  - isDaemon()
-  - setDaemon()
-- Priority based methods
-  - getPriority()
-  - setPriority()
-- Preventing thread exceution
-  - sleep()
-  - yeild()
-  - join()
-- Interrupting thread methods
-  - intrupt
-  - isIterrupted()
-  - interrupted()
-
-### Example 1
-
-```java
-class Test
-{
-    public static void main(String args[])
-    {
-        System.out.println("Hello");
-        System.out.println(Thread.currentThread().getName());
-        Thread.currentThread().setName("Nothing");
-        System.out.println(Thread.currentThread().getName());
-        System.out.println(10/0);
-    }
-}
+```JAVA
+int x = 5;
+int y = 6;
+int z = 50;
+System.out.println(x + y + z);
 ```
 
-### Example 2
+---
 
-```java
-class Test extends Thread
-{
-    public void run()
-    {
-        System.out.println("Thread is excecuted by "+Thread.currentThread().getName());
-    }
-    public static void main(String args[])
-    {
-        System.out.println("Hello is printed by "+Thread.currentThread().getName());
-        Thread t1 = new Thread();
-        t1.setName("Java");
-        t1.start();
+#### Type 6 :-
 
-        Thread t2 = new Thread();
-        t2.setName("Lecture");
-        t2.start();
-    }
-}
+```JAVA
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);
 ```
 
-## 1. Daemon Threads methods
+---
 
-- Which is run in the background of another thread
-- It provides services to the threads
-- Daemon thread is depend on the main function
-- Ex : ErrorHandling , Spellchecker
-- Methods
-  - public final void setDaemon(boolean b)
-  - public final void isDaemon()
+#### Type 7 :-
 
-### Example
-
-```java
-class Test extends Thread
-{
-    public void run()
-    {
-        if(Thread.currentThread().isDaemon())
-        {
-            System.out.println("Daemon Thread");
-        }
-        else
-        {
-            System.out.println("Child Thread");
-        }
-    }
-    public static void main()
-    {
-        System.out.println("Main Thread");
-        Thread t = new Thread();
-        t.setDaemon();
-        t.start();
-    }
-}
+```JAVA
+int w, x, y, z;
+w = x = 50;
+y = z = 100;
+System.out.println(w + x + y + z);
 ```
 
-## 2. Sleep Threads methods
+---
 
-- It is used to pause the execution of the thread for a specified amount of time
-- It is a static method of Thread class
+#### Type 8 :-
 
-### Example 1
-
-```java
-class Test extends Thread
-{
-    public void run()
-    {
-        for(int i=1;i<=10;i++)
-        {
-            try
-            {
-                Thread.sleep(1000);
-            }
-            catch(Exception e)
-            {
-                System.out.println(e);
-            }
-            System.out.println(i);
-        }
-    }
-    public static void main(String[] args)
-    {
-        Test t1 = new Test();
-        t1.start();
-    }
-}
-
+```JAVA
+String name = "Soyab";
+System.out.println("Hello " + name);
 ```
 
-### Example 2
+---
 
-```java
-class Sleep extends Thread
-{
-    public static void main(String args[]) throws Exception
-    {
-        for(int i=1;i<5;i++)
-        {
-            Thread.sleep(1000);
-            System.out.println(i);
-        }
-    }
-}
+#### Type 9 :-
+
+```JAVA
+String firstName = "Soyab ";
+String lastName = "Shaikh";
+String fullName = firstName + lastName;
+System.out.println(fullName);
 ```
 
-### Example 3
+---
 
-```java
-class Test extends Thread
-{
-    public void run()
-    {
-        try
-        {
-            for(int i=0;i<5;i++)
-            {
-                System.out.println(i+" : "+Thread.currentThread().getName());
-                Thread.sleep(1000);
-            }
-        }
-        catch(Exception e)
-        {
-            System.out.println(e);
-        }
-    }
-    public static void main(String args[])
-    {
-        Test t1 = new Test();
-        t1.start();
-        Test t2 = new Test();
-        t2.start();
-    }
-}
+#### All type of data :-
+
+```JAVA
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
 ```
+
+---
