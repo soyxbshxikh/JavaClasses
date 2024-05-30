@@ -191,3 +191,25 @@ String myText = "Hello";
 ```
 
 ---
+
+#### User input in java :-
+
+```JAVA
+import java.util.Scanner;
+
+class MyClass {
+    public static void main(String[] args) {
+        int x, y, sum;
+        Scanner myObj = new Scanner(System.in);
+
+        System.out.println("First number:");
+        x = myObj.nextInt();
+
+        System.out.println("Second number:");
+        y = myObj.nextInt();
+
+        sum = x + y;
+        System.out.println("Addition is : " + sum);
+    }
+}
+```
