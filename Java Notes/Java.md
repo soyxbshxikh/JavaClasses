@@ -1,6 +1,6 @@
 <h1 align="center"> JAVA Notes </h1>
 
-### 1. What is Java ?
+## 1. What is Java ?
 
 - Java is a popular programming language.
 - Java file name always save **. Java** extension.
@@ -12,7 +12,7 @@
 
 ---
 
-### 2. Which software is used for JAVA ?
+## 2. Which software is used for JAVA ?
 
 - Eclipse.
 - NetBeans.
@@ -20,13 +20,13 @@
 
 ---
 
-### 3. How to see output in JAVA ?
+## 3. How to see output in JAVA ?
 
 - Right-Click on Your JAVA file, and click **RUN**.
 
 ---
 
-### 4. Basic structure of JAVA
+## 4. Basic structure of JAVA
 
 ```JAVA
 public class MyClass {
@@ -45,7 +45,7 @@ public class MyClass {
 
 ---
 
-### 5. Print output in JAVA
+## 5. Print output in JAVA
 
 ```JAVA
 public class Main {
@@ -67,22 +67,10 @@ Output :-
 
 ---
 
-### 6. Variables Declaration
+## 6. Variables Declaration
 
----
 
-> In Java, there are different types of data types. <br>
- for example:-
-
-- **String** - Stores text "Hello" ( in double quotes ).
-- **int** - Stores integers numbers ( 123 or -123 ).
-- **float** - Stores floating point numbers ( 19.99 or -19.99 ).
-- **char** - Stores single characters 'a' or 'B' ( in single quotes ).
-- **boolean** - stores values with two states: ( true or false )
-
----
-
-#### Syntax :-
+### Syntax :-
 
 ```JAVA
 data_type variableName = value;
@@ -90,7 +78,7 @@ data_type variableName = value;
 
 ---
 
-#### Type 1 :-
+### Type 1 :-
 
 ```JAVA
 int myNum = 15;
@@ -99,7 +87,7 @@ System.out.println(myNum);
 
 ---
 
-#### Type 2 :-
+### Type 2 :-
 
 ```JAVA
 int myNum;
@@ -109,7 +97,7 @@ System.out.println(myNum);
 
 ---
 
-#### Type 3 :-
+### Type 3 :-
 
 ```JAVA
 int myNum = 15;
@@ -119,7 +107,7 @@ System.out.println(myNum);
 
 ---
 
-#### Type 4 :-
+### Type 4 :-
 
 ```JAVA
 int x = 5;
@@ -129,7 +117,7 @@ System.out.println("Output is :- " + (x + y));
 
 ---
 
-#### Type 5 :-
+### Type 5 :-
 
 ```JAVA
 int x = 5;
@@ -140,7 +128,7 @@ System.out.println(x + y + z);
 
 ---
 
-#### Type 6 :-
+### Type 6 :-
 
 ```JAVA
 int x = 5, y = 6, z = 50;
@@ -149,7 +137,7 @@ System.out.println(x + y + z);
 
 ---
 
-#### Type 7 :-
+### Type 7 :-
 
 ```JAVA
 int w, x, y, z;
@@ -160,7 +148,7 @@ System.out.println(w + x + y + z);
 
 ---
 
-#### Type 8 :-
+### Type 8 :-
 
 ```JAVA
 String name = "Soyab";
@@ -169,7 +157,7 @@ System.out.println("Hello " + name);
 
 ---
 
-#### Type 9 :-
+### Type 9 :-
 
 ```JAVA
 String firstName = "Soyab ";
@@ -180,7 +168,7 @@ System.out.println(fullName);
 
 ---
 
-#### All type of data :-
+### All type of data :-
 
 ```JAVA
 int myNum = 5;
@@ -192,7 +180,7 @@ String myText = "Hello";
 
 ---
 
-#### User input in java :-
+### User input in java :-
 
 ```JAVA
 import java.util.Scanner;
@@ -213,3 +201,111 @@ class MyClass {
     }
 }
 ```
+
+---
+
+## 7. Data Types
+
+### Java Data types are divided into two groups :-
+
+ <img src="a.png" height="400" width="500">
+
+ ---
+
+### 1 ) Primitive data types
+
+- **byte** - Stores whole numbers from -128 to 127.
+- **short** - Stores whole numbers from -32,768 to 32,767.
+- **int** - Stores whole numbers from -2,147,483,648 to 2,147,483,647.
+- **long** - Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+- **float** - Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits.
+- **double** - Stores fractional numbers. Sufficient for storing 15 decimal digits.
+- **boolean** -	Stores true or false values.
+- **char** - Stores a single character/letter or ASCII values.
+
+### 2 ) Non-primitive data types
+
+- Non-primitive data types are created by the programmer and is not defined by Java (Like String).
+- Non-primitive data types can be used to call methods to perform certain operations.
+- Non-primitive data types can be null.
+- Non-primitive data types starts with an uppercase letter.
+
+---
+
+## 8. Operators
+
+### 1 ) Arithmetic operators
+
+<img src="b.png" height="400" width="500">
+
+---
+
+### 2 ) Assignment operators
+
+<img src="c.png" height="400" width="500">
+
+
+---
+
+### 3 ) Comparison operators
+
+<img src="d.png" height="400" width="500">
+
+---
+
+
+### 4 ) Logical operators
+
+<img src="e.png" height="400" width="700">
+
+---
+
+## 8. Loops
+
+### 1 ) for loop
+
+```JAVA
+public class For {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(2 * i);
+        }
+    }
+}
+```
+
+---
+
+### 2 ) while loop
+
+```JAVA
+public class While {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 10) {
+            System.out.println(2 * i);
+            i++;
+
+        }
+
+    }
+}
+```
+
+---
+
+### 3 ) do-while loop
+
+```JAVA
+public class DoWhileLoop {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println(2 * i);
+            i++;
+        } while (i <= 10);
+    }
+}
+```
+
+---
