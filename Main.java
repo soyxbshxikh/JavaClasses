@@ -12,7 +12,7 @@ class Account {
     }
 
     public void deposit(double amount) {
-        balance + = amount;
+        balance += amount;
         System.out.println(amount + " deposited successfully.");
     }
 
