@@ -89,7 +89,7 @@ public class Main {
                     System.out.print("Enter Account Number: ");
                     int accNumber = scanner.nextInt();
                     System.out.print("Enter Account Holder Name: ");
-                    String accHolder = scanner.next();
+                    String accHolder = scanner.nextLine();
                     System.out.print("Enter Initial Balance: ");
                     double balance = scanner.nextDouble();
                     bank.addAccount(accNumber, accHolder, balance);

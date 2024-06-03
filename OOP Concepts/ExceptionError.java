@@ -18,7 +18,7 @@ public class ExceptionError {
         }
         System.out.println("this message is out side of the code");
 
-        // for specific exceptions
+        // for specific exceptions 1
 
         // System.out.println("Enter two Number");
         // try
@@ -32,7 +32,9 @@ public class ExceptionError {
         // System.out.println("Arithmetic error: "+e.getMessage());
         // }
         // System.out.println("this message is out side of the code");
-        // System.out.println();
+
+        // for specific exceptions 2
+        
         // int c[] = new int[10];
         // try
         // {
