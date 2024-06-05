@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 class Account {
-    int accNumber;
+    long accNumber;
     String accHolder;
     double balance;
 
-    public Account(int accNumber, String accHolder, double balance) {
+    public Account(long accNumber, String accHolder, double balance) {
         this.accNumber = accNumber;
         this.accHolder = accHolder;
         this.balance = balance;
@@ -34,30 +34,38 @@ class Account {
 
 class Bank {
     Account[] accounts;
-    int totalAccounts;
+    long totalAccounts;
 
     public Bank() {
         accounts = new Account[100];
         totalAccounts = 0;
     }
 
-    public void addAccount(int accNumber, String accHolder, double balance) {
+    public int findAccountIndex(long accNumber) {
+        for (int i = 0; i < totalAccounts; i++) {
+            if (accounts[i].accNumber == accNumber) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void addAccount(long accNumber, String accHolder, double balance) {
         Account newAccount = new Account(accNumber, accHolder, balance);
         accounts[totalAccounts] = newAccount;
         totalAccounts++;
         System.out.println("Account added successfully.");
     }
 
-    public void removeAccount(int accNumber) {
-        for (int i = 0; i < totalAccounts; i++) {
-            if (accounts[i].accNumber == accNumber) {
-                accounts[i] = accounts[totalAccounts - 1];
-                totalAccounts--;
-                System.out.println("Account removed successfully.");
-                return;
-            }
+    public void removeAccount(long accNumber) {
+        int index = findAccountIndex(accNumber);
+        if (index!= -1) {
+            accounts[index] = accounts[(int) totalAccounts - 1];
+            totalAccounts--;
+            System.out.println("Account removed successfully.");
+        } else {
+            System.out.println("Account not found.");
         }
-        System.out.println("Account not found.");
     }
 
     public void displayAllAccounts() {
@@ -83,37 +91,50 @@ public class Main {
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter Account Number: ");
-                    int accNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline character
+                    long accNumber = scanner.nextLong();
+                    scanner.nextLine();
                     System.out.print("Enter Account Holder Name: ");
                     String accHolder = scanner.nextLine();
                     System.out.print("Enter Initial Balance: ");
                     double balance = scanner.nextDouble();
+                    scanner.nextLine();
                     bank.addAccount(accNumber, accHolder, balance);
                     break;
                 case 2:
                     System.out.print("Enter Account Number to Remove: ");
-                    int accNumToRemove = scanner.nextInt();
+                    long accNumToRemove = scanner.nextLong();
                     bank.removeAccount(accNumToRemove);
                     break;
                 case 3:
                     System.out.print("Enter Account Number to Deposit: ");
-                    int accNumToDeposit = scanner.nextInt();
+                    long accNumToDeposit = scanner.nextLong();
                     System.out.print("Enter Deposit Amount: ");
                     double depositAmount = scanner.nextDouble();
-                    bank.accounts[accNumToDeposit - 1].deposit(depositAmount);
+                    scanner.nextLine();
+                    int index = bank.findAccountIndex(accNumToDeposit);
+                    if (index!= -1) {
+                        bank.accounts[index].deposit(depositAmount);
+                    } else {
+                        System.out.println("Account not found.");
+                    }
                     break;
                 case 4:
                     System.out.print("Enter Account Number to Withdraw: ");
-                    int accNumToWithdraw = scanner.nextInt();
+                    long accNumToWithdraw = scanner.nextLong();
                     System.out.print("Enter Withdraw Amount: ");
                     double withdrawAmount = scanner.nextDouble();
-                    bank.accounts[accNumToWithdraw - 1].withdraw(withdrawAmount);
+                    scanner.nextLine();
+                    int index2 = bank.findAccountIndex(accNumToWithdraw);
+                    if (index2!= -1) {
+                        bank.accounts[index2].withdraw(withdrawAmount);
+                    } else {
+                        System.out.println("Account not found.");
+                    }
                     break;
                 case 5:
                     bank.displayAllAccounts();
@@ -124,7 +145,7 @@ public class Main {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        } while (choice != 6);
+        } while (choice!= 6);
 
         scanner.close();
     }
