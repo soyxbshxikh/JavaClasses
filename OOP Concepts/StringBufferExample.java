@@ -1,3 +1,20 @@
+// We can create a string with three types:-
+
+// 1.String
+// - string is immutable they can create new object if we do any changes in string
+// ex :- String name = "nothing"; 
+// if we can concat the name with same string so new object will create in the memory
+
+// 2.String Buffer
+// - String buffer is mutable They can change the value of the string
+// - It has all the synchronized methods
+
+// 3.String Builder
+// - String builder is also mutable They can change the value of the String
+// - It has all the non non-synchronized methods
+
+// All the method are same in the string buffer and stream builder.
+
 public class StringBufferExample {
     public static void main(String[] args) {
         StringBuffer sb = new StringBuffer("nothing");
