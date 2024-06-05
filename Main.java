@@ -83,11 +83,13 @@ public class Main {
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter Account Number: ");
                     int accNumber = scanner.nextInt();
+                    scanner.nextLine(); // Consume the newline character
                     System.out.print("Enter Account Holder Name: ");
                     String accHolder = scanner.nextLine();
                     System.out.print("Enter Initial Balance: ");
