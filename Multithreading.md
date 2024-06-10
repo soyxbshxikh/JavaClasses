@@ -6,7 +6,7 @@
 
 ---
 
-#### Types :
+#### Types
 
 1 . Process based Multitasking { Multiprocessing }
 
@@ -24,7 +24,7 @@
 
 ---
 
-## Without Thread Example :
+## Without Thread Example
 
 ```java
 class Mxplayer
