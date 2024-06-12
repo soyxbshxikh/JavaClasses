@@ -330,7 +330,7 @@ class Test extends Thread
     }
 }
 
-```
+```+
 
 ### Example 2
 
