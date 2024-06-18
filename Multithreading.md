@@ -251,11 +251,11 @@ class Test extends Thread
     public static void main(String args[])
     {
         System.out.println("Hello is printed by "+Thread.currentThread().getName());
-        Thread t1 = new Thread();
+        Test t1 = new Test();
         t1.setName("Java");
         t1.start();
 
-        Thread t2 = new Thread();
+        Test t2 = new Test();
         t2.setName("Lecture");
         t2.start();
     }
@@ -288,11 +288,11 @@ class Test extends Thread
             System.out.println("Child Thread");
         }
     }
-    public static void main()
+    public static void main(String[] args)
     {
         System.out.println("Main Thread");
-        Thread t = new Thread();
-        t.setDaemon();
+        Test t = new Test();
+        t.setDaemon(true);
         t.start();
     }
 }
@@ -330,7 +330,7 @@ class Test extends Thread
     }
 }
 
-```
+```+
 
 ### Example 2
 
