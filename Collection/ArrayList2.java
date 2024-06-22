@@ -51,8 +51,11 @@ public class ArrayList2 {
                     break;
                 case 3:
                     System.out.print("Set Product: ");
+                    System.out.println("Enter product name which you want to update");
                     String setProduct = scanner.nextLine();
-                    list.set(0, setProduct);
+                    System.out.println("Enter index number : ");
+                    int index = scanner.nextInt();
+                    list.set(index, setProduct);
                     System.out.println("Pruduct: "+ list);
                     sc.productSet(setProduct);
                     break;
